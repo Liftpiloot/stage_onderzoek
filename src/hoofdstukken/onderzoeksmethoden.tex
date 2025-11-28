@@ -10,16 +10,30 @@
 In dit hoofdstuk worden de onderzoeksmethoden beschreven die gebruikt zijn bij het antwoorden van de deelvragen.
 Hier zijn deze methoden per deelvraag toegelicht, samen met de gebruikte data, en eventuele data-analyse.
 
+
 \section{Deelvraag 1}
+
 \subsection{Onderzoeksopzet}
 % TIP: Beschrijf je plan van aanpak op hoofdlijnen.
+%     \item Deelvraag 1: Hoe worden boekhoudgegevens tussen SolvCRM en e-Boekhouden.nl momenteel uitgewisseld?
+
+Om de huidige werkwijze rondom de uitwisseling van boekhoudgegevens in kaart te brengen,
+worden twee semigestructureerde interviews afgenomen: één met een gebruiker van SolvCRM
+en één met een gebruiker van e-Boekhouden.nl.
+Deze methode is geschikt omdat gebruikerservaringen, handmatige stappen en knelpunten het beste via kwalitatieve data kunnen worden verkend.
+
+De interviews duren circa 45 minuten en volgen een vooraf opgestelde vragenlijst met ruimte
+voor doorvragen.
+Indien een fysiek interview niet mogelijk is, wordt een gestructureerde
+schriftelijke vragenlijst gebruikt.
+Door observatie van gebruikers bij het invoeren van boekhouding gegevens, kunnen de workflows geverifieërd worden.
 
 \subsection{Dataverzameling}
-% TIP: Wat heb je gebruikt aan bronnen?
-% - Interviews
-% - Observaties
-% - Documentatie SolvCRM/e-Boekhouden
-% - Technische tests
+\begin{itemize}
+    \item Transcripten van de semigestructureerde interviews.
+    \item Schriftelijke antwoorden (indien e-mail interview).
+    \item Documentatie van SolvCRM en e-boekhouden.nl.
+\end{itemize}
 
 \subsection{Data-analyse}
 % TIP: Hoe heb je je bevindingen verwerkt?
@@ -27,30 +41,77 @@ Hier zijn deze methoden per deelvraag toegelicht, samen met de gebruikte data, e
 % - vergelijken van technische opties
 % - testen van prototype
 
+
 \section{Deelvraag 2}
+
 \subsection{Onderzoeksopzet}
+% Welke functionele en niet-functionele eisen zijn noodzakelijk voor het ontwerp van een koppeling tussen SolvCRM en e-Boekhouden.nl?
+Voor het opstellen van functionele en niet-functionele eisen wordt een combinatie gebruikt van literatuuronderzoek, documentanalyse en een interview met de productmanager van Solvware.
+Het literatuuronderzoek richt zich op best practices binnen requirements engineering, software-integraties en API-koppelingen.
+De documentanalyse op SolvCRM-documentatie
+zorgt voor aansluiting op de bestaande architectuur.
+Het interview identificeert wensen en randvoorwaarden vanuit de organisatie.
 
 \subsection{Dataverzameling}
+\begin{itemize}
+    \item Wetenschappelijke en vakliteratuur over requirements engineering en API-integraties.
+    \item Architectuur documentatie van SolvCRM
+    \item Interview en opdracht notities van de productmanager.
+\end{itemize}
 
 \subsection{Data-analyse}
+
 
 \section{Deelvraag 3}
+
 \subsection{Onderzoeksopzet}
+%  Welke technische oplossingsrichtingen bestaan er voor het automatiseren van de uitwisseling van klant- en boekhoudgegevens, en welke hiervan is het meest geschikt voor Solvware?
+Om mogelijke technische oplossingsrichtingen te identificeren en beoordelen, wordt een available product analysis uitgevoerd van vergelijkbare integratie-oplossingen binnen en buiten Solvware.
+Daarnaast wordt een documentanalyse uitgevoerd op bestaande koppelingen binnen Solvware om herbruikbare patronen of beperkingen vast te stellen.
+Een expertinterview met de productmanager of lead developer ondersteunt de uiteindelijke keuze.
 
 \subsection{Dataverzameling}
+\begin{itemize}
+    \item Technische documentatie van bestaande integraties.
+    \item Literatuur over API-koppel technieken.
+    \item Interview notities van experts binnen Solvware.
+\end{itemize}
 
 \subsection{Data-analyse}
+
 
 \section{Deelvraag 4}
-\subsection{Onderzoeksopzet}
 
+\subsection{Onderzoeksopzet}
+%  Welke best practices zijn nodig om een kwalitatieve Proof of Concept te bouwen, testen en onderhouden binnen Solvware?
+Voor het bepalen van best practices voor het bouwen, testen en onderhouden van een Proof of
+Concept wordt literatuuronderzoek uitgevoerd op het gebied van PoC‐ontwikkeling, API-integratie,
+testingstrategieën en softwarekwaliteit.
+Daarnaast wordt een documentanalyse uitgevoerd van Solvware’s interne ontwikkelrichtlijnen, Git-workflows en technische standaarden.
+De voorlopige lijst met best practices wordt gevalideerd door middel van een interview of reviewgesprek met een Solvware-developer.
 \subsection{Dataverzameling}
+\begin{itemize}
+    \item Literatuur over Proof of concept ontwikkeling, API-integratie, testingstrategieën en softwarekwaliteit.
+    \item Documentatie over ontwikkelrichtlijnen binnen Solvware.
+    \item Interview notities van een Solvware developer.
+\end{itemize}
 
 \subsection{Data-analyse}
 
+
 \section{Deelvraag 5}
+
 \subsection{Onderzoeksopzet}
+%  In welke mate vermindert de ontworpen koppeling de tijdsduur en foutgevoeligheid van de uitwisseling van boekhoudgegevens?
+Om te bepalen in welke mate de ontworpen koppeling tijdsduur en foutgevoeligheid vermindert, wordt een Proof of Concept ontwikkeld en getest.
+Hiervoor wordt een benchmarktest uitgevoerd waarin de automatische koppeling wordt vergeleken met de huidige handmatige werkwijze.
+Daarnaast wordt een observatie of taakmeting uitgevoerd met één of meerdere gebruikers.
 
 \subsection{Dataverzameling}
+\begin{itemize}
+    \item Tijdsmetingen van handmatige en automatische workflows.
+    \item Logging vsn API-calls (foutmeldingen).
+    \item Observatie notities van gebruikers.
+\end{itemize}
 
 \subsection{Data-analyse}
