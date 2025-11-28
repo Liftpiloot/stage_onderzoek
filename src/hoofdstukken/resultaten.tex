@@ -1,12 +1,84 @@
 \chapter{Resultaten}
 % TIP:
 % Per deelvraag resultaten weergeven.
+Dit hoofdstuk presenteert de resultaten van het onderzoek en geeft afzonderlijk antwoord op de vijf deelvragen.
+De resultaten zijn gebaseerd op documentanalyse, analyse van de huidige systemen, literatuuronderzoek en gesprekken met medewerkers van Solvware.
 
 \section{Resultaten voor Deelvraag 1}
 % TIP: Analyse van huidige werkwijze.
 
 \section{Resultaten voor Deelvraag 2}
-% TIP: Lijst en onderbouwing van eisen.
+\textbf{Welke functionele en niet-functionele eisen zijn noodzakelijk voor het ontwerp van een koppeling tussen SolvCRM en e-Boekhouden.nl?}
+
+Op basis van documentanalyse, best practices voor API-integraties en gesprekken met de opdrachtgever zijn de noodzakelijke eisen vastgesteld. Deze eisen worden hieronder gepresenteerd als onderzoeksresultaten.
+
+\subsection{Functionele eisen}
+
+\subsubsection*{Klantinformatie}
+Uit het onderzoek blijkt dat correcte synchronisatie van klantdata essentieel is voor een foutloze verwerking. Daarom zijn de volgende functionele eisen vastgesteld:
+
+\begin{itemize}
+    \item Automatische synchronisatie van klantinformatie tussen beide systemen.
+    \item Mapping van klantgegevens tussen SolvCRM en e-Boekhouden.nl.
+    \item Mogelijkheid om bestaande klanten te koppelen.
+    \item Automatische aanmaak van nieuwe klanten in beide systemen.
+    \item Verwijderde of gedeactiveerde klanten worden consistent doorgevoerd.
+    \item Wijzigingen in SolvCRM worden automatisch verwerkt in e-Boekhouden.nl.
+\end{itemize}
+
+Daarnaast moet synchronisatie inzichtelijk zijn:
+\begin{itemize}
+    \item Logging van koppelingen, aanmaakacties, fouten en wijzigingen.
+\end{itemize}
+
+\subsubsection*{Factuurmutaties}
+De analyse toont aan dat facturen één van de meest foutgevoelige onderdelen zijn van de huidige werkwijze. Hiervoor zijn de volgende eisen vastgesteld:
+
+\begin{itemize}
+    \item Automatische synchronisatie van verzonden facturen.
+    \item Mapping van factuurmutaties.
+    \item Ondersteuning voor koppelen van bestaande mutaties.
+    \item Automatische aanmaak van nieuwe mutaties in beide systemen.
+    \item Logging van koppelingen, aanmaakacties en fouten.
+\end{itemize}
+
+\subsubsection*{Creditnota's}
+Uit gesprekken met medewerkers blijkt dat creditnota’s vaak manueel worden ingevoerd, wat foutgevoelig is. Daarom gelden de volgende eisen:
+
+\begin{itemize}
+    \item Automatische synchronisatie van creditnota’s.
+    \item Mapping van creditnota’s tussen beide systemen.
+    \item Mogelijkheid om bestaande creditnota’s te koppelen.
+    \item Automatische aanmaak van creditnota’s.
+    \item Correcte koppeling van creditnota’s aan hoofd-facturen in SolvCRM.
+    \item Automatische bijwerking van factuurstatussen.
+    \item Logging van koppelingen, aanmaakacties en fouten.
+\end{itemize}
+
+\subsubsection*{Betalingsmutaties}
+De analyse toont dat realtime inzicht in betalingen voor klanten essentieel is. De volgende eisen zijn daarom vastgesteld:
+
+\begin{itemize}
+    \item Automatische synchronisatie van betalingsmutaties.
+    \item Mapping tussen beide systemen.
+    \item Mogelijkheid om bestaande betalingen te koppelen.
+    \item Aanmaken van nieuwe betalingsmutaties in beide systemen.
+    \item Automatische koppeling van betalingen aan de juiste factuur.
+    \item Automatische bijwerking van de factuurstatus.
+    \item Logging van koppelingen, aanmaakacties en fouten.
+\end{itemize}
+
+\subsection{Niet-functionele eisen}
+
+Uit de best practices van API-integratie komen de volgende eisen:
+
+\begin{itemize}
+    \item \textbf{Betrouwbaarheid:} synchronisatie moet fouttolerant zijn.
+    \item \textbf{Prestaties:} synchronisatie mag de performance van SolvCRM niet negatief beïnvloeden.
+    \item \textbf{Beveiliging:} API-sleutels en gegevens moeten veilig worden opgeslagen.
+    \item \textbf{Onderhoudbaarheid:} logging moet voldoende detail bieden om fouten te reproduceren.
+    \item \textbf{Gebruiksvriendelijkheid:} duidelijke instellingenpagina voor synchronisatie.
+\end{itemize}
 
 \section{Resultaten voor Deelvraag 3}
 % TIP: Vergelijking van integratie-opties.
